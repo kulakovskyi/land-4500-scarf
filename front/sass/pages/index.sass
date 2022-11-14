@@ -1,0 +1,338 @@
+$blue: #000055
+$magenta: #ff267e
+$green: #05C489
+$green-hover: #09B47F
+$gray: #EDEDED
+$text: #292929
+$yellow: #FAE700
+$yellow-2: #FFE601
+$white: #FFFFFF
+$violet: #341656
+
+$font-suisse-reg: SuisseIntl-Regular, sans-serif //400
+$font-suisse-semb: SuisseIntl-SemiBold, sans-serif //600
+$font-wulkan: WulkanDisplay, sans-serif
+
+
+body
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  overscroll-behavior: none
+  background: $blue
+  img,
+  picture
+    max-width: 100%
+    height: auto
+
+.container
+  max-width: 700px
+  margin: auto
+
+.all-link
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: 0
+  z-index: 60
+
+.sam
+  width: 100%
+  height: 100%
+  overflow-x: hidden
+  position: relative
+  @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+    background: #005 url('../img/bg-desc.jpg') no-repeat 50% 0/cover
+  @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+    background: #005  url('../img/bg-desc.jpg') no-repeat 50% 0/cover
+  @media screen and (max-width: 600px) and (orientation: portrait)
+    background: #005 url("../img/bg-mob.jpg") no-repeat 50% 130%/cover
+  @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+    background: #005 url("../img/bg-landscape.jpg") no-repeat 50% 0/cover
+  &.overflow
+    overflow: hidden
+  &__wrapper
+    display: flex
+    justify-content: flex-end
+    width: 100%
+    height: 100%
+    transition: .5s ease
+  &__people
+    position: absolute
+    width: 100%
+    height: 150px
+    z-index: 5
+    bottom: 0
+    @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+      background: url('../img/people-desc.png') no-repeat 50% 0/cover
+    @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+      background: url('../img/people-tab.png') no-repeat 50% 0/cover
+    @media screen and (max-width: 600px) and (orientation: portrait)
+      background: none
+    @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+      background: url("../img/people-desc.png") no-repeat 50% 0/cover
+  &__statue
+    position: absolute
+    bottom: 0
+    height: 62vh
+    width: 20vh
+    left: -77px
+    z-index: 6
+    @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+      background: url('../img/statue.png') no-repeat 50% 0/cover
+    @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+      background: url('../img/statue.png') no-repeat 50% 0/cover
+    @media screen and (max-width: 600px) and (orientation: portrait)
+      background: none
+    @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+      background: url("../img/statue.png") no-repeat 50% 0/cover
+
+  &__pyramid
+    position: absolute
+    top: 22%
+    left: 0
+    height: 86vh
+    width: 134vh
+    picture
+      position: relative
+      z-index: 4
+  &__pers
+    position: absolute
+    top: 22%
+    left: 67px
+    height: 105vh
+    width: 66vh
+    z-index: 7
+  &__footer
+    display: flex
+    align-items: center
+    position: absolute
+    right: 20px
+    bottom: 20px
+    z-index: 20
+    .text
+      font-family: $font-suisse-reg
+      font-size: 11.6667px
+      line-height: 14px
+      letter-spacing: 0.02em
+      color: #E8E8E8
+      text-align: right
+      margin: 0 18px 0 0
+    .img1
+      max-width: 50px
+      margin: 0 18px 0 0
+    .img2
+      max-width: 50px
+
+  &__logo
+    position: absolute
+    top: 0
+    left: 0
+    max-width: 462px
+    z-index: 10
+  &__info
+    position: relative
+    z-index: 20
+    padding: 95px 80px 0 0
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__title
+    font-family: $font-suisse-semb
+    color: #FFFFFF
+    letter-spacing: 0.03em
+    text-transform: uppercase
+    font-feature-settings: 'pnum' on, 'lnum' on
+    font-size: 58px
+    line-height: 80px
+    padding: 7px 35px 5px
+    background: $magenta
+    margin: 0 0 40px 0
+    span
+      font-family: $font-wulkan
+  &__bonus
+    font-family: $font-suisse-semb
+    font-size: 77px
+    line-height: 100px
+    color: #E8E8E8
+    letter-spacing: 0.03em
+    text-transform: uppercase
+    font-feature-settings: 'pnum' on, 'lnum' on
+    &-2
+      margin: 0 0 30px 0
+    span
+      font-family: $font-wulkan
+      color: $magenta
+  &__row
+    display: flex
+    align-items: center
+    margin: 0 0 36px 0
+  &__item
+    font-family: $font-suisse-semb
+    font-size: 32px
+    line-height: 40px
+    letter-spacing: 0.03em
+    text-transform: uppercase
+    font-feature-settings: 'pnum' on, 'lnum' on
+    color: #E8E8E8
+    &:not(:last-child)
+      margin: 0 37px 0 0
+    img
+      max-width: 62px
+  &__link
+    font-family: $font-suisse-semb
+    display: inline-block
+    padding: 30px 55px 28px
+    font-size: 24px
+    line-height: 31px
+    letter-spacing: 0.08em
+    text-transform: uppercase
+    color: $blue
+    background: $green
+    border-radius: 4.72468px
+    transition: background-color .3s ease
+    margin: 0 auto 26px
+    &:hover
+      background: $green-hover
+
+  &__salut1
+    position: absolute
+    top: -71px
+    left: 442px
+    z-index: 0
+    width: 48vh
+    height: 48vh
+    background: url("../img/salut1.svg") no-repeat 50% 0/contain
+    animation: salut1 5s ease infinite
+    transform: scale(0)
+  &__salut2
+    position: absolute
+    top: 228px
+    left: 821px
+    z-index: 0
+    width: 43vh
+    height: 43vh
+    background: url("../img/salut2.svg") no-repeat 50% 0/contain
+    animation: salut1 5s ease infinite
+    animation-delay: 1.5s
+    transform: scale(0)
+  &__salut3
+    position: absolute
+    bottom: 30px
+    right: 160px
+    width: 32vh
+    height: 32vh
+    background: url("../img/salut3.svg") no-repeat 50% 0/contain
+    animation: salut3 5s ease infinite
+    animation-delay: 1s
+  &__salut4
+    position: absolute
+    bottom: 145px
+    right: -57px
+    width: 27vh
+    height: 27vh
+    background: url("../img/salut4.svg") no-repeat 50% 0/contain
+    animation: salut3 5s ease infinite
+    animation-delay: 3s
+  &__spot1
+    position: absolute
+    width: 530px
+    height: 1000px
+    background: url("../img/spotlight.png") no-repeat 50% 0/contain
+    top: -932px
+    left: 116px
+    transform: rotate(45deg)
+    transform-origin: bottom center
+    animation: rotateSpot1 5s ease infinite
+  &__spot2
+    position: absolute
+    width: 530px
+    height: 1000px
+    background: url("../img/spotlight.png") no-repeat 50% 0/contain
+    transform-origin: bottom center
+    transform: rotate(-35deg)
+    top: -909px
+    left: 38px
+    animation: rotateSpot2 5s ease infinite
+    animation-delay: 1s
+  &__spot3
+    position: absolute
+    width: 530px
+    height: 1000px
+    background: url("../img/spotlight.png") no-repeat 50% 0/contain
+    transform-origin: bottom center
+    bottom: 210px
+    right: -24px
+    transform: rotate(45deg)
+    animation: rotateSpot3 5s ease infinite
+
+.wrapper-mob
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+
+.opacity
+  opacity: 0
+  visibility: hidden
+  transition: opacity .5s linear, visibility .5s linear
+
+.hidden
+  display: none
+
+
+@keyframes rotateSpot1
+  0%
+    transform: rotate(25deg)
+  50%
+    transform: rotate(55deg)
+  100%
+    transform: rotate(25deg)
+
+@keyframes rotateSpot2
+  0%
+    transform: rotate(-35deg)
+  50%
+    transform: rotate(-65deg)
+  100%
+    transform: rotate(-35deg)
+
+@keyframes rotateSpot3
+  0%
+    transform: rotate(45deg)
+  50%
+    transform: rotate(25deg)
+  100%
+    transform: rotate(45deg)
+
+
+@keyframes salut1
+  0%
+    transform: scale(0)
+    opacity: 1
+  50%
+    transform: scale(1)
+    opacity: 1
+  80%
+    transform: scale(1)
+    opacity: 0
+  100%
+    transform: scale(0)
+    opacity: 0
+
+@keyframes salut3
+  0%
+    transform: scale(1)
+    opacity: 1
+  30%
+    opacity: 0
+    transform: scale(1)
+  55%
+    transform: scale(0)
+    opacity: 0
+  95%
+    transform: scale(1)
+    opacity: 1
+  100%
+    transform: scale(1)
+    opacity: 1
+
+
